@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+}
+
+
+:root {
+    --main: #64B6AC;
+    --secondary: #61E786;
+    --blue: #9792E3;
+    --light: #EDFFEC;
+    --dark: #48435C;
+}
+
+.month, .banner, .balance {
+    border: 1px solid var(--secondary);
+}
+
+header {
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 100vw;
+    overflow:hidden;
+    scroll-behavior: smooth;
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+
+#main-nav {
+    display: none;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+#main-nav li {
+    padding: .6rem 10rem;
+    color: var(--dark);
+    border-bottom: 1px solid var(--dark);
+}
+#main-nav li:hover {
+    font-size: 1.3rem;
+}
+#main-nav li:last-child {
+    border-bottom: 0;
+}
+
+#main-nav ul {
+    list-style-type: none;
+}
+
+#main-nav a, #main-nav p {
+    text-decoration: none;
+}
+#main-nav a li:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+#menu-toggle {
+    cursor: pointer;
+}
+#menu-toggle:hover {
+    font-size: 1.9rem
+}
+
+section.app {
+    min-height: 84vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    width: 100%;
+    background-color: white;
+    color: var(--dark);
+}
+
+article.balance {
+    grid-column: 10 / 13;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+article.banner {
+    grid-column: 1 / 8;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article.month {
+    grid-column: 8 / 10;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article.form {
+    grid-column: 1 / 13;
+    grid-row: 2 / 6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+article.by-category {
+    grid-column: 1 / 13;
+    grid-row: 6 / 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article.total {
+    grid-column: 1 / 13;
+    grid-row: 11 / 13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#cat-table td, #cat-table th{
+    padding: 1rem 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--dark)
+}
+
+td {
+    font-size:1.3rem
+}
+
+.input-field {
+    display: flex;
+    align-items: space-around;
+    justify-content: space-between;
+}
+
+
+
+footer {
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+input, select, button {
+    display: block;
+    width: 100%;
+    margin: .8rem;
+    height: 1.8rem;
+    border-radius: 5%;
+}
+
+input {
+    padding: .8rem .3rem;
+}
+
+option {
+    text-align: center;
+}
+
+/* -----Media Queries---- */
+
+@media (max-width: 600px) {
+    section.app {
+        min-height: 84vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        width: 100vw;
+    }
+    
+    article.banner {
+        grid-column: 1 / 13;
+        grid-row: 1 / 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    article.balance {
+        grid-column: 1 / 13;
+        grid-row: 2 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    article.month {
+        grid-column: 1 / 13;
+        grid-row: 3 / 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    article.form {
+        grid-column: 1 / 13;
+        grid-row: 4 / 8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    article.by-category {
+        grid-column: 1 / 13;
+        grid-row: 8 / 14;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    article.total {
+        grid-column: 1 / 13;
+        grid-row: 14 / 17;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+}

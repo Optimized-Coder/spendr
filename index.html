@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <header>
+        <h1>Spendr <span class="material-symbols-outlined">
+                insights
+            </span></h1>
+        <span class="material-icons" id="menu-toggle">menu</span>
+    </header>
+    <nav id="main-nav">
+        <ul>
+            <li>
+                Hello {user}
+            </li>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>Budget Planner (coming soon)</li></a>
+        </ul>
+    </nav>
+    <main>
+        <section class="app">
+            <article class="banner">
+                <h2>Track Your Spending</h2>
+            </article>
+            <article class="month">{Month}</article>
+            <article class="balance">
+                <p>
+                    <span class="material-symbols-outlined">
+                        payments
+                    </span>
+                    £1000
+                </p>
+            </article>
+            <article class="form">
+                <div class="incoming input-field">
+                    <form action="">
+                        <label for="income">Add Income</label>
+                        <input type="text">
+                        <select name="category" id="category">
+                            <option value="Food">Food</option>
+                        </select>
+                        <button>submit</button>
+                    </form>
+                </div>
+                <div class="outgoing input-field">
+                    <form action="">
+                        <label for="income">Add Spending</label>
+                        <input type="text">
+                        <select name="category" id="category">
+                            <option value="Salary">Salary</option>
+                        </select>
+                        <button>submit</button>
+                    </form>
+                </div>
+            </article>
+            <article class="by-category">
+                <aside class="spend-by-category">
+                    <table id="cat-table">
+                        <thead>
+                            <th>Category</th>
+                            <th>£</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Food</td>
+                                <td>£100</td>
+                            </tr>
+                            <tr>
+                                <td>Socializing</td>
+                                <td>£100</td>
+                            </tr>
+                            <tr>
+                                <td>Subscriptions</td>
+                                <td>£100</td>
+                            </tr>
+                            <tr>
+                                <td>Housing</td>
+                                <td>£100</td>
+                            </tr>
+                            <tr>
+                                <td>Other</td>
+                                <td>£100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+            </article>
+            <article class="total">
+                <div>
+                    <p>Total Income: £1000</p>
+                </div>
+                <div>
+                    <p>Total Expendature: £1000</p>
+                </div>
+                <div>
+                    <p>Gain / Loss: £0</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; OptimizedCoder 2023</p>
+    </footer>
+
+<script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
