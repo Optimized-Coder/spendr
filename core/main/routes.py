@@ -1,5 +1,6 @@
 from core.main import bp
 from flask import render_template, redirect, url_for
+from flask_login import current_user
 from datetime import datetime
 
 today = datetime.today()
@@ -16,5 +17,6 @@ def app(month):
     return render_template(
         'index.html',
         title = 'Spendr - Track your spending',
-        month = month
+        month = month,
+        user = current_user
     )

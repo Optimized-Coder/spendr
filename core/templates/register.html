@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Register</h2>
+
+
+<main class="auth-form">
+    <form action="" method="POST">
+        <section>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+        </section>
+        <section>
+            <label for="first_name">Enter first name</label>
+            <input type="text" name="first_name" id="first_name">
+        </section>
+        <section>
+            <label for="password">Enter Password</label>
+            <input type="password" name="password" id="password">
+        </section>
+        <section>
+            <label for="password_2">Re-Enter Password</label>
+            <input type="password" name="password_2" id="password_2">
+        </section>
+        <section>
+            <button type="submit">Submit</button>
+        </section>
+    </form>
+    <p>If you already have an account, sign in</p>
+</main>
+
+{% endblock %}

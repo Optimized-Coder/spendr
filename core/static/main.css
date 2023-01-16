@@ -183,7 +183,39 @@ input {
 
 option {
     text-align: center;
+    margin: 1rem 0;
 }
+
+
+/* AUTH */
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.auth-form {
+    margin: 0 4rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 78vh;
+    max-width: 100vw;
+} 
+
+.auth-form section {
+    margin: 1rem 0;
+}
+
+.auth-form input {
+    width: 100%;
+}
+
+.auth-form button {
+    margin-top: 3rem;
+}
+
 
 /* -----Media Queries---- */
 
