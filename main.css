@@ -52,6 +52,7 @@ header {
     padding: .6rem 10rem;
     color: var(--dark);
     border-bottom: 1px solid var(--dark);
+    width: 100%;
 }
 #main-nav li:hover {
     font-size: 1.3rem;
@@ -62,6 +63,7 @@ header {
 
 #main-nav ul {
     list-style-type: none;
+    width: 100%;
 }
 
 #main-nav a, #main-nav p {

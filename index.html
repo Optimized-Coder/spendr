@@ -25,7 +25,7 @@
                 Hello {user}
             </li>
             <a href=""><li>Home</li></a>
-            <a href=""><li>Budget Planner (coming soon)</li></a>
+            <a href=""><li>Budget Planner</li></a>
         </ul>
     </nav>
     <main>
@@ -45,18 +45,21 @@
             <article class="form">
                 <div class="incoming input-field">
                     <form action="">
-                        <label for="income">Add Income</label>
-                        <input type="text">
+                        <label for="income">Add Spending</label>
+                        <input type="text" name="spending" id="spending">
                         <select name="category" id="category">
-                            <option value="Food">Food</option>
+                            <option value="Food">Food</option><option value="Socializing">Socializing</option>
+                            <option value="Subscriptions">Subscriptions</option>
+                            <option value="Housing">Housing</option>
+                            <option value="Other">Other</option>
                         </select>
                         <button>submit</button>
                     </form>
                 </div>
                 <div class="outgoing input-field">
                     <form action="">
-                        <label for="income">Add Spending</label>
-                        <input type="text">
+                        <label for="income">Add Income</label>
+                        <input type="text" name="income" id="income">
                         <select name="category" id="category">
                             <option value="Salary">Salary</option>
                         </select>
