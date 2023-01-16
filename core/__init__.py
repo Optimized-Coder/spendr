@@ -13,6 +13,8 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
+    from core import models
+
     # register bp's
     from core.main import bp as bp_main
     app.register_blueprint(bp_main)
