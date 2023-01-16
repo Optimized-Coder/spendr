@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, url_for
 from os import path
 from flask_sqlalchemy import SQLAlchemy
 
@@ -13,8 +13,9 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
-    # register db's
-
+    # register bp's
+    from core.main import bp as bp_main
+    app.register_blueprint(bp_main)
 
     create_database(app)
 
